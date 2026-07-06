@@ -1,0 +1,258 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f9fc;
+    color: #1f2937;
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: #1d4ed8;
+}
+
+a:hover,
+a:focus-visible {
+    color: #1e40af;
+}
+
+*:focus-visible {
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    background: #111827;
+    color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.site-nav {
+    display: flex;
+    gap: 1.25rem;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+    border: none;
+    padding: 0.25rem;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #ffffff;
+}
+
+.site-nav a {
+    color: #f3f4f6;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.site-nav a:hover,
+.site-nav a:focus-visible {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .site-header {
+        padding: 0.9rem 1rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0.75rem;
+        left: 0.75rem;
+        flex-direction: column;
+        background: #111827;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .site-nav.is-open {
+        display: flex;
+    }
+
+    .site-nav a {
+        padding: 0.4rem 0;
+    }
+
+    main {
+        padding: 1.25rem 0.9rem 3rem;
+    }
+
+    .section {
+        margin-bottom: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-filters {
+        flex-wrap: wrap;
+    }
+
+    .filter-btn {
+        flex: 1 1 calc(50% - 0.5rem);
+        text-align: center;
+    }
+
+    .contact-form {
+        max-width: none;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+}
+
+main {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem 1rem 4rem;
+}
+
+.section {
+    margin-bottom: 2.5rem;
+}
+
+.projects-grid {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.card {
+    background: #ffffff;
+    padding: 1.25rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    display: block;
+}
+
+.image-trigger {
+    border: none;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
+}
+
+.project-filters {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+
+.filter-btn {
+    background: #e5e7eb;
+    border: none;
+    padding: 0.5rem 0.9rem;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.filter-btn.active {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.card.is-hidden {
+    display: none;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0;
+    list-style: none;
+}
+
+.skills-list li {
+    background: #e0f2fe;
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-width: 500px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font: inherit;
+}
+
+.contact-form input.error,
+.contact-form textarea.error {
+    border-color: #dc2626;
+}
+
+.form-feedback,
+.form-status {
+    min-height: 1.2em;
+    margin: 0;
+    font-size: 0.9rem;
+    color: #dc2626;
+}
+
+.contact-form button {
+    width: fit-content;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 6px;
+    background: #1d4ed8;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.contact-form button:hover,
+.contact-form button:focus-visible {
+    background: #1e40af;
+}
